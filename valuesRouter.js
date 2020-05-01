@@ -26,7 +26,7 @@ Router.post(
 
 // VALUES
     if (obj.type === 'insertCredit') {
-            let newValue = new Values({userId, type, date, selectedCustomer, selectedService, selectedProduct, paymentMethod, isProduct, isService, price, status, ref});
+            const newValue = Values({userId, type, date, selectedCustomer, selectedService, selectedProduct, paymentMethod, isProduct, isService, price, status, ref})
             try {
                 const value = await newValue.save();
                 return res.send({inserted: true, id: value._id});

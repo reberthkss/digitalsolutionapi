@@ -13,42 +13,18 @@ const valuesSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    selectedCustomer: {
-        type: String,
-        required: false
-    },
-    selectedService: {
-        type: String | null,
-        required: false
-    },
-    selectedProduct: {
-        type: String | null,
-        required: false
-    },
-    paymentMethod: {
-        type: String | null,
-        required: false
-    },
-    isProduct: {
-        type: Boolean,
-        required: false
-    },
-    isService: {
-        type: Boolean,
-        required: false
-    },
+    selectedCustomer: String,
+    selectedService: String,
+    selectedProduct: String,
+    paymentMethod: String,
+    isProduct: Boolean,
+    isService: Boolean,
     price: {
-        type: String,
+        type: Number,
         required: true
     },
-    status: {
-        type: String | null,
-        required: false
-    },
-    ref: {
-        type: String | null,
-        required: false
-    }
+    status: String,
+    ref: String,
 })
 
 const Values = new mongoose.model('values', valuesSchema);

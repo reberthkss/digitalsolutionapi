@@ -20,9 +20,9 @@ Router.post(
             return res.status(400).json({message: e.message})
         }
 
-        console.log(userId);
+
         let obj = req.body;
-        obj.userId = userId;
+
         const {type, name, cnpj, formalName, email, fone, address, contactPerson} = obj;
 
 // CUSTOMERS
